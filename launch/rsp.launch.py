@@ -11,14 +11,18 @@ import xacro
 
 
 def generate_launch_description():
+    print("Generating launch description...")
 
     # Check if we're told to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('my_bot'))
+    print(f"Package path: {pkg_path}")
     xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
+    print(f"xacro file: {xacro_file}")
     robot_description_config = xacro.process_file(xacro_file)
+    print("xacro processing completed.")
     
     # Create a robot_state_publisher node
     params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
