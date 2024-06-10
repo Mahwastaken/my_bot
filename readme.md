@@ -86,17 +86,18 @@ don't forget to source before
    ```bash
       ros2 launch my_bot rsp.launch.py use_sim_time:=true
    ```
-   avec gazebo
+
+other terminal
+   ```bash
+   ros2 run joint_state_publisher_gui joint_state_publisher_gui
+   ```
+      avec gazebo
    ```bash
       ros2 launch my_bot launch_sim.launch.py
    ```
    keyboard control
    ```bash
       ros2 run teleop_twist_keyboard teleop_twist_keyboard
-   ```
-other terminal
-   ```bash
-   ros2 run joint_state_publisher_gui joint_state_publisher_gui
    ```
 other terminal
    ```bash
