@@ -131,7 +131,7 @@ it should work
 By following these steps, you can effectively manage your Docker container workflow, ensuring your work is saved and easily resumable.
 
 **GIT**
-    ```
+    ```bash
     cd /path/to/your/project
     git status
     git add .
