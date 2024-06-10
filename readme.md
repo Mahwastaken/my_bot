@@ -50,9 +50,13 @@ Yes, you're on the right track. Using Docker is a great solution for running sof
 
    apt update
 
-   sudo apt upgrade
+    apt upgrade
 
    apt install -y ros-humble-desktop
+
+   apt install ros-humble-joint-state-publisher-gui
+
+   apt install ros-humble-gazebo-ros-pkgs
    ```
 4. **Sourcing the setup script**:
 Replace ".bash" with your shell if you're not using bash
@@ -75,7 +79,28 @@ in the second terminal type
 it should work
 
 
-
+**ACTUALLY WORKING ON THE THING**
+to run the program
+don't forget to source before
+   ```bash
+      ros2 launch my_bot rsp.launch.py use_sim_time:=true
+   ```
+   avec gazebo
+   ```bash
+      ros2 launch my_bot launch_sym.launch.py
+   ```
+   keyboard control
+   ```bash
+      ros2 run teleop_twist_keyboard teleop_twist_keyboard
+   ```
+other terminal
+   ```bash
+   ros2 run joint_state_publisher_gui joint_state_publisher_gui
+   ```
+other terminal
+   ```bash
+   rviz2 
+   ```
 
 
 
