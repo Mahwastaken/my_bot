@@ -63,6 +63,7 @@ Replace ".bash" with your shell if you're not using bash
 Possible values are: setup.bash, setup.sh, setup.zsh
     ```bash
     source /opt/ros/humble/setup.bash
+    source ~/dev_ws/install/setup.bash
     ```
 4. **Testing to see if it works**:
 open a new terminal (see section bellow)
@@ -87,7 +88,7 @@ don't forget to source before
    ```
    avec gazebo
    ```bash
-      ros2 launch my_bot launch_sym.launch.py
+      ros2 launch my_bot launch_sim.launch.py
    ```
    keyboard control
    ```bash
