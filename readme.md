@@ -131,10 +131,85 @@ it should work
 By following these steps, you can effectively manage your Docker container workflow, ensuring your work is saved and easily resumable.
 
 **GIT**
-    ```bash
-    cd /path/to/your/project
-    git status
-    git add .
-    git commit -m "Your commit message here"
-    git push origin main
-    ```
+### How to Push Changes to a Remote Git Repository
+
+1. **Open Terminal**: Open your terminal.
+
+2. **Navigate to Your Project Directory**:
+   ```bash
+   cd /path/to/your/project
+   ```
+
+3. **Initialize Git (if not already initialized)**:
+   ```bash
+   git init
+   ```
+
+4. **Add Changes**:
+   ```bash
+   git add .
+   ```
+
+5. **Commit Changes**:
+   ```bash
+   git commit -m "Your commit message"
+   ```
+
+6. **Add Remote Repository (if not already added)**:
+   ```bash
+   git remote add origin https://github.com/yourusername/yourrepository.git
+   ```
+
+7. **Push Changes**:
+   ```bash
+   git push origin branch_name
+   ```
+
+### How to Pull Changes from a Remote Git Repository
+
+1. **Open Terminal**: Open your terminal.
+
+2. **Navigate to Your Project Directory**:
+   ```bash
+   cd /path/to/your/project
+   ```
+
+3. **Fetch All Branches**:
+   ```bash
+   git fetch origin
+   ```
+
+4. **Switch to the Desired Branch**:
+   - If the branch exists locally:
+     ```bash
+     git checkout branch_name
+     ```
+   - If the branch does not exist locally:
+     ```bash
+     git checkout -b branch_name origin/branch_name
+     ```
+
+5. **Pull the Branch**:
+   ```bash
+   git pull origin branch_name
+   ```
+
+### Summary:
+
+#### Push Changes:
+1. Navigate to your project directory: `cd /path/to/your/project`
+2. Initialize Git (if needed): `git init`
+3. Add changes: `git add .`
+4. Commit changes: `git commit -m "Your commit message"`
+5. Add remote repository (if needed): `git remote add origin https://github.com/yourusername/yourrepository.git`
+6. Push changes: `git push origin branch_name`
+
+#### Pull Changes:
+1. Navigate to your project directory: `cd /path/to/your/project`
+2. Fetch all branches: `git fetch origin`
+3. Switch to the desired branch:
+   - If exists locally: `git checkout branch_name`
+   - If not: `git checkout -b branch_name origin/branch_name`
+4. Pull the branch: `git pull origin branch_name`
+
+By following these steps, you can successfully push and pull changes to and from your remote Git repository.
