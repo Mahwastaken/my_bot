@@ -57,6 +57,7 @@ Yes, you're on the right track. Using Docker is a great solution for running sof
    apt install ros-humble-joint-state-publisher-gui
 
    apt install ros-humble-gazebo-ros-pkgs
+   apt install ros-humble-slam-toolbox
    ```
 4. **Sourcing the setup script**:
 Replace ".bash" with your shell if you're not using bash
@@ -94,6 +95,9 @@ other terminal
       avec gazebo
    ```bash
       ros2 launch my_bot launch_sim.launch.py
+      ##alternante
+      ros2 launch my_bot launch_sim.launch.py world:=src/my_bot/worlds/<CHANGE ME>
+
    ```
    keyboard control
    ```bash
